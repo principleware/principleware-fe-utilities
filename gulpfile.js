@@ -6,8 +6,8 @@ gulp.task("typedoc", function() {
         .src(["src/**/*.ts"])
         .pipe(gulpIgnore.exclude("*.spec.ts"))
         .pipe(typedoc({
-            name: "Principleware typescipt utilites",            
-            out: "docs/",            
+            name: "Principleware typescipt utilites (1.0.0)",            
+            out: "../principleware.github.io/principleware-fe-utilties/docs/",            
             
             module: "commonjs",
             target: "es5",
