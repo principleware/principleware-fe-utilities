@@ -128,11 +128,6 @@ export interface IPipelineSettings<U> {
  * Transforms a given promise with additonal pipeline processing.
  * Specifically, in this method, compared to the given promise, the return
  * promise contains validating and adpating stages.
- * @function readerPipeline
- * @param {Promise} readerPromise The given promise.
- * @param {Object} settings Configuration such as validators and adaptors
- * @returns {Promise} The result promise.
- * @throws {} 
  */
 export function readerPipeline<T, U>(readerPromise: PromiseLike<T>, settings: IPipelineSettings<U>) {
     return readerPromise
@@ -151,9 +146,6 @@ export function readerPipeline<T, U>(readerPromise: PromiseLike<T>, settings: IP
 
 /**
  * Transforms a given promise into one promise with our own implementation.
- * @function map
- * @param {Promise} promise
- * @returns {Promise} 
  */
 export function transform<T>(promise: PromiseLike<T>): PromiseLike<T> {
     return new DummyPromise(function(resolve, reject) {
