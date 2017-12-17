@@ -15,8 +15,7 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'src/**/*.ts',
-            'tests/**/*.ts'
+            { pattern: 'src/**/*.ts' }
         ],
 
 
@@ -35,7 +34,7 @@ module.exports = function(config) {
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress', 'karma-typescript'],
+        reporters: ['dots', 'karma-typescript'],
 
 
         // web server port
@@ -52,7 +51,7 @@ module.exports = function(config) {
 
 
         // enable / disable watching file and executing tests whenever any file changes
-        autoWatch: true,
+        autoWatch: false,
 
 
         // start these browsers
