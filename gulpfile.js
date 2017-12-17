@@ -8,7 +8,6 @@ gulp.task("typedoc", function() {
         .pipe(typedoc({
             name: "Principleware typescipt utilites (1.0.0)",            
             out: "docs/",            
-            mode: "file",
             
             module: "commonjs",
             target: "es5",
