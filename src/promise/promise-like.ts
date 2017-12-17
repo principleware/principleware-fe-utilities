@@ -145,7 +145,7 @@ function resolve(newValue) {
  * @param {DummyPromise~ctorCallback} fn - The given function 
  * @throws {} - Some error 
  */
-export function DummyPromise(fn) {
+export function DummyPromise<T>(fn: (resolve: (value?: T | PromiseLike<T>) => void, reject: (reason?) => void) => void) {
     if (typeof this !== 'object') {
         throw new TypeError('Promises must be constructed via new');
     }
