@@ -74,7 +74,7 @@ export function liftIntoReject<T>(value: T): PromiseLike<T> {
  * Converts a given promise into another promise which ensures that
  * the given guard evalutes to be true from the state of the given promise.
  */
-export function liftWithGuard<T>(promise: PromiseLike<T>, guard: (...args) => boolean): PromiseLike<T> {
+export function liftWithGuard<T>(promise: PromiseLike<T>, guard: (x: T) => boolean): PromiseLike<T> {
     return promise.then(function(data) {
         return new DummyPromise(function(resolve, reject) {
             if (guard(data)) {
@@ -107,7 +107,7 @@ export function settle<T>(promise: PromiseLike<T>): PromiseLike<T> {
 /**
  * Converts the given promise into a promise which does not reject anything.
  */
-export function liftToPredicate<T>(promise: PromiseLike<T>, guard: (...args) => boolean): PromiseLike<boolean> {
+export function liftToPredicate<T>(promise: PromiseLike<T>, guard: (x: T) => boolean): PromiseLike<boolean> {
     return new DummyPromise(function(resolve, reject) {
         /*jslint unparam: true */
         promise.then(function(data) {
