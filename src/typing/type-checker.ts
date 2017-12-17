@@ -48,51 +48,60 @@ export function isFunction(x: any): x is Function {
     return typeof x === 'function';
 }
 
-interface ITypeDef {
+export interface ITypeDef {
     name: string,
     val: any,
     pred: (any) => boolean
 };
 
+export const tyBool: ITypeDef = { name: 'Boolean', val: false, pred: isBoolean };
+export const tyNull: ITypeDef = { name: 'Null', val: null, pred: isNull };
+export const tyUndefined: ITypeDef = { name: 'Undefined', val: undefined, pred: isUndefined };
+export const tyNumber: ITypeDef = { name: 'Number', val: 0, pred: isNumber };
+export const tyString: ITypeDef = { name: 'String', val: '', pred: isString };
+export const tySymbol: ITypeDef = { name: 'Symbol', val: null, pred: isSymbol };
+export const tyObject: ITypeDef = { name: 'Object', val: function() { return {}; }, pred: isObject };
+export const tyArray: ITypeDef = { name: 'Array', val: function() { return []; }, pred: isArray };
+export const tyFunction: ITypeDef = { name: 'Function', val: function() { }, pred: isFunction };
+
 /**
  * @constant - Predefined types and their properties.
  */
 const preDefinedTypes: { [key: string]: ITypeDef } = {
-    tyBool: { name: 'Boolean', val: false, pred: isBoolean },
-    tyNull: { name: 'Null', val: null, pred: isNull },
-    tyUndefined: { name: 'Undefined', val: undefined, pred: isUndefined },
-    tyNumber: { name: 'Number', val: 0, pred: isNumber },
-    tyString: { name: 'String', val: '', pred: isString },
-    tySymbol: { name: 'Symbol', val: null, pred: isSymbol }, // TODO: Specify its default value
-    tyObject: { name: 'Object', val: function() { return {}; }, pred: isObject },
-    tyArray: { name: 'Array', val: function() { return []; }, pred: isArray },
-    tyFunction: { name: 'Function', val: function() { }, pred: isFunction }
+    tyBool: tyBool,
+    tyNull: tyNull,
+    tyUndefined: tyUndefined,
+    tyNumber: tyNumber,
+    tyString: tyString,
+    tySymbol: tySymbol,
+    tyObject: tyObject,
+    tyArray: tyArray,
+    tyFunction: tyFunction
 };
 /**
  * Returns the default value for a given type.
  */
 export function defaultValue(ty: ITypeDef): any {
     let val = ty.val;
-    if (ty !== preDefinedTypes.tyFunction && typeof val === 'function') {
+    if (ty !== tyFunction && typeof val === 'function') {
         val = val();
     }
     return val;
-
 }
 
 /**
  * Type checks if a given value is type of the given ty
  */
-function typeChecker(value: any, ty: ITypeDef): boolean {
+export function ok(value: any, ty: ITypeDef): boolean {
     return ty.pred(value);
 }
 
 /**
  * Returns the type for the given value.
  */
-function getType(value: any): ITypeDef {
+export function getType(value: any): ITypeDef {
     for (let prop in preDefinedTypes) {
-        if (typeChecker(value, preDefinedTypes[prop])) {
+        if (ok(value, preDefinedTypes[prop])) {
             return preDefinedTypes[prop];
         }
     }
@@ -102,8 +111,8 @@ function getType(value: any): ITypeDef {
 /**
  * @function assert
  */
-function typeAssert(value: any, ty: ITypeDef): void {
-    if (typeChecker(value, ty)) {
+export function assert(value: any, ty: ITypeDef): void {
+    if (ok(value, ty)) {
         return;
     }
     throw new Error('type check error: exptected type is ' +
