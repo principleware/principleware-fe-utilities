@@ -6,9 +6,9 @@
         "outDir": "tmp",        
         "noImplicitAny": false,
         "sourceMap": true,
-        "types": {
+        "types": [
             "jasmine"
-        }
+        ]
     },
     "exclude": [
         "node_modules"
