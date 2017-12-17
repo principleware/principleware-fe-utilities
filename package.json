@@ -1,0 +1,27 @@
+{
+  "name": "principleware-fe-utilities",
+  "version": "1.0.0",
+  "description": "A set of utilties on url, array, string, data, promise, and more",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://principleware@github.com/principleware/principleware-fe-utilities.git"
+  },
+  "keywords": [
+    "utilities"
+  ],
+  "author": "Principle Tang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/principleware/principleware-fe-utilities/issues"
+  },
+  "homepage": "https://github.com/principleware/principleware-fe-utilities#readme",
+  "devDependencies": {
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1",
+    "karma-typescript": "^3.0.8"
+  }
+}
