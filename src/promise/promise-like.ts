@@ -1,6 +1,6 @@
 // 
-// Author:: Xiaolong Tang <principleware@gmail.com>
-// Copyright:: Copyright (c) 2017, Xiaolong Tang
+// Author:: Tom Tang <principleware@gmail.com>
+// Copyright:: Copyright (c) 2017, Tom Tang
 // 
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the
@@ -128,22 +128,11 @@ function resolve(newValue) {
 }
 
 /**
- * This callback is used to construct a DummyPromise.
- * @callback DummyPromise~ctorCallback
- * @param {Function} resolve - A function to be called once the promise is successfully resolved.
- * @param {Function} reject - A function to be called once the promise fails to be resolved.
- */
-
-/**
  * Defines a dummy promise, which simulates the behavior of a normal Promise
  * but is suitable used in synchronous call.
  * This resulted object is also a jQuery deferred object, therefore,
  * it will be resolved by the jQuery deferred object if it is a resolved value in
  * the jQuery deferred object.
- * @class
- * @constructs DummyPromise
- * @param {DummyPromise~ctorCallback} fn - The given function 
- * @throws {} - Some error 
  */
 export function DummyPromise<T>(fn: (resolve: (value?: T | PromiseLike<T>) => void, reject: (reason?) => void) => void) {
     if (typeof this !== 'object') {

@@ -1,6 +1,6 @@
 // 
-// Author:: Xiaolong Tang <principleware@gmail.com>
-// Copyright:: Copyright (c) 2017, Xiaolong Tang
+// Author:: Tom Tang <principleware@gmail.com>
+// Copyright:: Copyright (c) 2017, Tom Tang
 // 
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the
