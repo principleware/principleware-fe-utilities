@@ -6,6 +6,22 @@ module.exports = function(config) {
 
         frameworks: ["jasmine", "karma-typescript"],
 
+        plugins: [
+            require('karma-typescript'),                                    
+            require('karma-jasmine'),
+            require('karma-chrome-launcher'),
+            require('karma-jasmine-html-reporter'),
+            require('karma-coverage-istanbul-reporter')            
+        ],
+        client:{
+            clearContext: false // leave Jasmine Spec Runner output visible in browser
+        },
+
+        coverageIstanbulReporter: {
+            reports: [ 'html', 'lcovonly' ],
+            fixWebpackSourcePaths: true
+        },
+        
         files: [
             { pattern: "src/**/*.ts" }
         ],

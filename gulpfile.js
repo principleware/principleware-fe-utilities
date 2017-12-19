@@ -1,7 +1,7 @@
 var gulp = require("gulp");
 var typedoc = require("gulp-typedoc");
 var gulpIgnore = require('gulp-ignore');
-gulp.task("typedoc", function() {
+gulp.task("doc", function() {
     return gulp
         .src(["src/**/*.ts"])
         .pipe(gulpIgnore.exclude("*.spec.ts"))
