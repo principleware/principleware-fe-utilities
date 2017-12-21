@@ -9,7 +9,7 @@ This project does not depend on any third libraries.
 
 To use it, clone this repo and install it as follows 
 
-> npm i --save-dev principleware-fe-utilities
+> yarn add https://github.com/principleware/principleware-fe-utilities.git
 
 ## Development and Test
 
@@ -23,4 +23,4 @@ To generate documentation, run
 
 ## Documentation
 
-[Visit documents](https://principleware.github.io/principleware-fe-utilities/index.html)
+[Visit documents](https://principleware.github.io/principleware-fe-utilities)
