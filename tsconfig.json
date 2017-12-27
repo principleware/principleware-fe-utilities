@@ -1,16 +1,19 @@
 {
-    "compileOnSave": false,    
     "compilerOptions": {
-        "module": "commonjs",
         "target": "es5",
-        "outDir": "tmp",        
-        "noImplicitAny": false,
+        "module": "es2015",
+        "moduleResolution": "node",
         "sourceMap": true,
-        "types": [
-            "jasmine"
-        ]
-    },
-    "exclude": [
-        "node_modules"
-    ]    
+        "inlineSources": true,
+        "declaration": true,
+        "experimentalDecorators": true,
+        "noImplicitAny": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "skipLibCheck": true,
+        "stripInternal": true,
+        "lib": [
+            "es2015",
+            "dom"
+        ]        
+    }
 }
