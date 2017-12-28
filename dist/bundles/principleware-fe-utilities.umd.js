@@ -5,6 +5,42 @@
 }(this, (function (exports) { 'use strict';
 
 /**
+ * Extends a given promise into a deferred object of jQuery.
+ * With this extension, we are able to chain together jQuery deferred
+ * objects (which are also promise objects.)
+ * @param {?} promise
+ * @return {?}
+ */
+function tojQueryDeferred(promise) {
+    if (!promise.always) {
+        promise.always = function (onFulfilled) {
+            return this.then(onFulfilled, onFulfilled);
+        };
+    }
+    if (!promise.done) {
+        promise.done = function (onFulfilled) {
+            return this.then(onFulfilled);
+        };
+    }
+    if (!promise.fail) {
+        promise.fail = function (onRejected) {
+            return this.then(null, onRejected);
+        };
+    }
+    if (!promise.progress) {
+        promise.progress = function () {
+            return this;
+        };
+    }
+    if (!promise.promise) {
+        promise.promise = function () {
+            return this;
+        };
+    }
+    return promise;
+}
+
+/**
  * @param {?} fn
  * @return {?}
  */
@@ -818,6 +854,7 @@ function convert(value, ty) {
  * Generated bundle index. Do not edit.
  */
 
+exports.tojQueryDeferred = tojQueryDeferred;
 exports.lift = lift;
 exports.liftIntoReject = liftIntoReject;
 exports.liftWithGuard = liftWithGuard;

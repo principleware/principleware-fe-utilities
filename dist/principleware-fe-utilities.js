@@ -1,4 +1,40 @@
 /**
+ * Extends a given promise into a deferred object of jQuery.
+ * With this extension, we are able to chain together jQuery deferred
+ * objects (which are also promise objects.)
+ * @param {?} promise
+ * @return {?}
+ */
+function tojQueryDeferred(promise) {
+    if (!promise.always) {
+        promise.always = function (onFulfilled) {
+            return this.then(onFulfilled, onFulfilled);
+        };
+    }
+    if (!promise.done) {
+        promise.done = function (onFulfilled) {
+            return this.then(onFulfilled);
+        };
+    }
+    if (!promise.fail) {
+        promise.fail = function (onRejected) {
+            return this.then(null, onRejected);
+        };
+    }
+    if (!promise.progress) {
+        promise.progress = function () {
+            return this;
+        };
+    }
+    if (!promise.promise) {
+        promise.promise = function () {
+            return this;
+        };
+    }
+    return promise;
+}
+
+/**
  * @param {?} fn
  * @return {?}
  */
@@ -812,5 +848,5 @@ function convert(value, ty) {
  * Generated bundle index. Do not edit.
  */
 
-export { lift, liftIntoReject, liftWithGuard, settle, liftToPredicate, readerPipeline, transform, DummyPromise, pushArray, makeArray, guid, getRandomInt, replace, applyEscape, reverseEscape, urlEncodePair, urlEncode, getParamByName, getQueryParamByName, getHashParamByName, safeParseInt, safeParseFloat, safeParseBool, convertible, convert, isBoolean, isNumber, isString, isSymbol, isNull, isUndefined, isArray$1 as isArray, isObject, isFunction, tyBool, tyNull, tyUndefined, tyNumber, tyString, tySymbol, tyObject, tyArray, tyFunction, defaultValue, ok, getType, assert };
+export { tojQueryDeferred, lift, liftIntoReject, liftWithGuard, settle, liftToPredicate, readerPipeline, transform, DummyPromise, pushArray, makeArray, guid, getRandomInt, replace, applyEscape, reverseEscape, urlEncodePair, urlEncode, getParamByName, getQueryParamByName, getHashParamByName, safeParseInt, safeParseFloat, safeParseBool, convertible, convert, isBoolean, isNumber, isString, isSymbol, isNull, isUndefined, isArray$1 as isArray, isObject, isFunction, tyBool, tyNull, tyUndefined, tyNumber, tyString, tySymbol, tyObject, tyArray, tyFunction, defaultValue, ok, getType, assert };
 //# sourceMappingURL=principleware-fe-utilities.js.map

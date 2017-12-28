@@ -1,3 +1,4 @@
+export * from './src/promise/inter-op';
 export * from './src/promise/monadic-operations';
 export * from './src/promise/promise-like';
 export * from './src/tools/arr';
