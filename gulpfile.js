@@ -3,7 +3,7 @@ var typedoc = require("gulp-typedoc");
 var gulpIgnore = require('gulp-ignore');
 gulp.task("doc", function() {
     return gulp
-        .src(["src/**/*.ts"])
+        .src(["src/lib/**/*.ts"])
         .pipe(gulpIgnore.exclude("*.spec.ts"))
         .pipe(typedoc({
             name: "Principleware typescript utilites (1.0.0)",            

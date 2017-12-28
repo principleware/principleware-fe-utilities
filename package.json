@@ -77,6 +77,10 @@
         "systemjs": "^0.19.40",
         "tslint": "^4.4.2",
         "typescript": "~2.3.0",
-        "zone.js": "^0.8.4"
+        "zone.js": "^0.8.4",
+        "gulp": "^3.9.1",
+        "gulp-ignore": "^2.0.2",
+        "gulp-typedoc": "^2.1.1",
+        "typedoc": "^0.9.0"        
     }
 }
