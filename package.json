@@ -1,6 +1,6 @@
 {
     "name": "principleware-fe-utilities",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "A set of utilties on url, array, string, data, promise, and more",
     "main": "./bundles/principleware-fe-utilities.umd.js",
     "module": "./principleware-fe-utilities.es5.js",
