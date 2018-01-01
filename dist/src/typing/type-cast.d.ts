@@ -1,4 +1,5 @@
 import * as typeChecker from './type-checker';
+export declare function safeParseString(value: any): string;
 /**
  * Parses a given value into an integer.
  */

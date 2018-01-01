@@ -759,6 +759,16 @@ function getHashParamByName(name, url) {
 }
 
 /**
+ * @param {?} value
+ * @return {?}
+ */
+function safeParseString(value) {
+    if (!value) {
+        return '';
+    }
+    return value.toString();
+}
+/**
  * Parses a given value into an integer.
  * @param {?} value
  * @return {?}
@@ -875,6 +885,7 @@ exports.urlEncode = urlEncode;
 exports.getParamByName = getParamByName;
 exports.getQueryParamByName = getQueryParamByName;
 exports.getHashParamByName = getHashParamByName;
+exports.safeParseString = safeParseString;
 exports.safeParseInt = safeParseInt;
 exports.safeParseFloat = safeParseFloat;
 exports.safeParseBool = safeParseBool;
