@@ -5,5 +5,6 @@ export * from './src/tools/arr';
 export * from './src/tools/math';
 export * from './src/tools/str';
 export * from './src/tools/url';
+export * from './src/tools/hash';
 export * from './src/typing/type-cast';
 export * from './src/typing/type-checker';

@@ -759,6 +759,81 @@ function getHashParamByName(name, url) {
 }
 
 /**
+ * @fileOverview
+ * Provides utilities for computing hash values
+ */
+/**
+ * Computes the hash code for a given value.
+ * This method takes into account the type of the given
+ * value when generating its hash code.
+ * @param {?} value
+ * @return {?}
+ */
+function hashCode(value) {
+    var /** @type {?} */ hash = 0;
+    if (ok(value, tyBool)) {
+        value = value ? 1 : 0;
+    }
+    else if (ok(value, tyNumber)) {
+        if (value === 0) {
+            return 0;
+        }
+    }
+    if (!value) {
+        return 0;
+    }
+    value = value.toString();
+    if (value.length === 0) {
+        return hash;
+    }
+    /*jslint plusplus: true */
+    for (var /** @type {?} */ i = 0, /** @type {?} */ len = value.length; i < len; i++) {
+        var /** @type {?} */ chr = value.charCodeAt(i);
+        hash = ((hash << 5) - hash) + chr;
+        hash |= 0; // Convert to 32bit integer
+    }
+    return hash;
+}
+/**
+ * Computes the hash code for a member of an object.
+ * @param {?} name
+ * @param {?} value
+ * @param {?} configuration
+ * @return {?}
+ */
+function hashPrimitiveMember(name, value, configuration) {
+    var /** @type {?} */ code = hashCode(value);
+    if (configuration) {
+        var /** @type {?} */ bits = configuration[name];
+        if (bits) {
+            return code << configuration[name];
+        }
+    }
+    return code;
+}
+/**
+ * Computes the hash code for a member of an object, based on
+ * the given member member, the value to be hashed, and the configuration
+ * about how each member contributes to the enire hash code of the
+ * object.
+ * @param {?} name
+ * @param {?} value
+ * @param {?} configuration
+ * @return {?}
+ */
+function hashMember(name, value, configuration) {
+    if (ok(value, tyArray)) {
+        var /** @type {?} */ code = 0;
+        /*jslint plusplus: true */
+        for (var /** @type {?} */ i = 0; i < value.length; i++) {
+            code = code + hashPrimitiveMember(name, value[i], configuration);
+        }
+        return code;
+    }
+    return hashPrimitiveMember(name, value, configuration);
+}
+
+/**
  * @param {?} value
  * @return {?}
  */
@@ -885,6 +960,8 @@ exports.urlEncode = urlEncode;
 exports.getParamByName = getParamByName;
 exports.getQueryParamByName = getQueryParamByName;
 exports.getHashParamByName = getHashParamByName;
+exports.hashCode = hashCode;
+exports.hashMember = hashMember;
 exports.safeParseString = safeParseString;
 exports.safeParseInt = safeParseInt;
 exports.safeParseFloat = safeParseFloat;
