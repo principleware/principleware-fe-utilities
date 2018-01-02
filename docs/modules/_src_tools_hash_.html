@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IPipelineSettings | Principleware typescript utilites (1.0.0)</title>
+	<title>&quot;src/tools/hash&quot; | Principleware typescript utilites (1.0.0)</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,112 +54,143 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_src_promise_monadic_operations_.html">&quot;src/promise/monadic-operations&quot;</a>
-				</li>
-				<li>
-					<a href="_src_promise_monadic_operations_.ipipelinesettings.html">IPipelineSettings</a>
+					<a href="_src_tools_hash_.html">&quot;src/tools/hash&quot;</a>
 				</li>
 			</ul>
-			<h1>Interface IPipelineSettings&lt;U&gt;</h1>
+			<h1>External module &quot;src/tools/hash&quot;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-type-parameters">
-				<h3>Type parameters</h3>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>U</h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-hierarchy">
-				<h3>Hierarchy</h3>
-				<ul class="tsd-hierarchy">
-					<li>
-						<span class="target">IPipelineSettings</span>
-					</li>
-				</ul>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Properties</h3>
+							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_src_promise_monadic_operations_.ipipelinesettings.html#adaptor" class="tsd-kind-icon">adaptor</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_src_promise_monadic_operations_.ipipelinesettings.html#validator" class="tsd-kind-icon">validator</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_src_tools_hash_.html#hashcode" class="tsd-kind-icon">hash<wbr>Code</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_src_tools_hash_.html#hashmember" class="tsd-kind-icon">hash<wbr>Member</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_src_tools_hash_.html#hashprimitivemember" class="tsd-kind-icon">hash<wbr>Primitive<wbr>Member</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="adaptor" class="tsd-anchor"></a>
-					<h3>adaptor</h3>
-					<div class="tsd-signature tsd-kind-icon">adaptor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in src/promise/monadic-operations.ts:124</li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">U</span></li>
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="hashcode" class="tsd-anchor"></a>
+					<h3>hash<wbr>Code</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">hash<wbr>Code<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/tools/hash.ts:13</li>
 								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>x: <span class="tsd-signature-type">any</span></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">U</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Computes the hash code for a given value.
+										This method takes into account the type of the given
+									value when generating its hash code.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="validator" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> validator</h3>
-					<div class="tsd-signature tsd-kind-icon">validator<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in src/promise/monadic-operations.ts:123</li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="hashmember" class="tsd-anchor"></a>
+					<h3>hash<wbr>Member</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">hash<wbr>Member<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, configuration<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/tools/hash.ts:60</li>
 								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>x: <span class="tsd-signature-type">any</span></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-									</li>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Computes the hash code for a member of an object, based on
+										the given member member, the value to be hashed, and the configuration
+										about how each member contributes to the enire hash code of the
+									object.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>configuration: <span class="tsd-signature-type">object</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-index-signature">
+											<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="hashprimitivemember" class="tsd-anchor"></a>
+					<h3>hash<wbr>Primitive<wbr>Member</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">hash<wbr>Primitive<wbr>Member<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, configuration<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/tools/hash.ts:43</li>
 								</ul>
-							</li>
-						</ul>
-					</div>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Computes the hash code for a member of an object.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>configuration: <span class="tsd-signature-type">object</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-index-signature">
+											<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -170,77 +201,50 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_index_.html">"index"</a>
+						<a href="_index_.html">"index"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_src_promise_inter_op_.html">"src/promise/inter-<wbr>op"</a>
+						<a href="_src_promise_inter_op_.html">"src/promise/inter-<wbr>op"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_src_promise_monadic_operations_.html">"src/promise/monadic-<wbr>operations"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_src_promise_promise_like_.html">"src/promise/promise-<wbr>like"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_src_tools_arr_.html">"src/tools/arr"</a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="../modules/_src_promise_monadic_operations_.html">"src/promise/monadic-<wbr>operations"</a>
+						<a href="_src_tools_hash_.html">"src/tools/hash"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_src_promise_promise_like_.html">"src/promise/promise-<wbr>like"</a>
+						<a href="_src_tools_math_.html">"src/tools/math"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_src_tools_arr_.html">"src/tools/arr"</a>
+						<a href="_src_tools_str_.html">"src/tools/str"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_src_tools_hash_.html">"src/tools/hash"</a>
+						<a href="_src_tools_url_.html">"src/tools/url"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_src_tools_math_.html">"src/tools/math"</a>
+						<a href="_src_typing_type_cast_.html">"src/typing/type-<wbr>cast"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_src_tools_str_.html">"src/tools/str"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_src_tools_url_.html">"src/tools/url"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_src_typing_type_cast_.html">"src/typing/type-<wbr>cast"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_src_typing_type_checker_.html">"src/typing/type-<wbr>checker"</a>
+						<a href="_src_typing_type_checker_.html">"src/typing/type-<wbr>checker"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_src_promise_monadic_operations_.ipipelinesettings.html" class="tsd-kind-icon">IPipeline<wbr>Settings</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_src_promise_monadic_operations_.ipipelinesettings.html#adaptor" class="tsd-kind-icon">adaptor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_src_promise_monadic_operations_.ipipelinesettings.html#validator" class="tsd-kind-icon">validator</a>
-							</li>
-						</ul>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_src_tools_hash_.html#hashcode" class="tsd-kind-icon">hash<wbr>Code</a>
 					</li>
-				</ul>
-				<ul class="after-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="../modules/_src_promise_monadic_operations_.html#lift" class="tsd-kind-icon">lift</a>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_src_tools_hash_.html#hashmember" class="tsd-kind-icon">hash<wbr>Member</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="../modules/_src_promise_monadic_operations_.html#liftintoreject" class="tsd-kind-icon">lift<wbr>Into<wbr>Reject</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="../modules/_src_promise_monadic_operations_.html#lifttopredicate" class="tsd-kind-icon">lift<wbr>ToPredicate</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="../modules/_src_promise_monadic_operations_.html#liftwithguard" class="tsd-kind-icon">lift<wbr>With<wbr>Guard</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="../modules/_src_promise_monadic_operations_.html#readerpipeline" class="tsd-kind-icon">reader<wbr>Pipeline</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="../modules/_src_promise_monadic_operations_.html#settle" class="tsd-kind-icon">settle</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="../modules/_src_promise_monadic_operations_.html#transform" class="tsd-kind-icon">transform</a>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_src_tools_hash_.html#hashprimitivemember" class="tsd-kind-icon">hash<wbr>Primitive<wbr>Member</a>
 					</li>
 				</ul>
 			</nav>

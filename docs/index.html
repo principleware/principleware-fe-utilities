@@ -67,12 +67,27 @@
 				<h2 id="dependencies">Dependencies</h2>
 				<p>This project does not depend on any third libraries. </p>
 				<h2 id="install">Install</h2>
+				<h3 id="source-option">Source Option</h3>
 				<p>To use it, clone this repo and install it as follows </p>
 				<blockquote>
 					<p>yarn add <a href="https://github.com/principleware/principleware-fe-utilities.git">https://github.com/principleware/principleware-fe-utilities.git</a></p>
 				</blockquote>
+				<p>Note that in latest Angular CLI (&gt; 1.5), you may need to explicitly
+					include the used external source files (outside the source directory
+					of your application) in <em>tsconfig.json</em>. To avoid such trouble, you
+				may pick up the <em>Package Option</em>.</p>
+				<h3 id="package-option">Package Option</h3>
+				<p>The <em>package</em> branch consists of the built version, which is compatible with the
+				<a href="https://docs.google.com/document/d/1CZC2rcpxffTDfRDs6p1cfbmKNLA6x5O-NtkJglDaBVs/edit#heading=h.k0mh3o8u5hx">Angular Package Format</a>. </p>
+				<blockquote>
+					<p>yarn add <a href="https://github.com/principleware/principleware-fe-utilities.git#package">https://github.com/principleware/principleware-fe-utilities.git#package</a></p>
+				</blockquote>
+				<p>The benefit of this option is having no worry about the use in Angular
+					CLI &gt; 1.5. However, the monolithic package may introduce unused
+				functions into your application; eliminating those unused code is up to the compiler.</p>
 				<h2 id="development-and-test">Development and Test</h2>
-				<p>Create your modules in the <strong>src</strong> directory, and run the following command for test</p>
+				<p>The instructions in the section only apply to the master branch. To
+				run tests in the library, simply run the following command</p>
 				<blockquote>
 					<p>npm test</p>
 				</blockquote>
@@ -91,31 +106,37 @@
 						<a href="globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_promise_inter_op_.html">"promise/inter-<wbr>op"</a>
+						<a href="modules/_index_.html">"index"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_promise_monadic_operations_.html">"promise/monadic-<wbr>operations"</a>
+						<a href="modules/_src_promise_inter_op_.html">"src/promise/inter-<wbr>op"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_promise_promise_like_.html">"promise/promise-<wbr>like"</a>
+						<a href="modules/_src_promise_monadic_operations_.html">"src/promise/monadic-<wbr>operations"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_tools_arr_.html">"tools/arr"</a>
+						<a href="modules/_src_promise_promise_like_.html">"src/promise/promise-<wbr>like"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_tools_math_.html">"tools/math"</a>
+						<a href="modules/_src_tools_arr_.html">"src/tools/arr"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_tools_str_.html">"tools/str"</a>
+						<a href="modules/_src_tools_hash_.html">"src/tools/hash"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_tools_url_.html">"tools/url"</a>
+						<a href="modules/_src_tools_math_.html">"src/tools/math"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_typing_type_cast_.html">"typing/type-<wbr>cast"</a>
+						<a href="modules/_src_tools_str_.html">"src/tools/str"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_typing_type_checker_.html">"typing/type-<wbr>checker"</a>
+						<a href="modules/_src_tools_url_.html">"src/tools/url"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_src_typing_type_cast_.html">"src/typing/type-<wbr>cast"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_src_typing_type_checker_.html">"src/typing/type-<wbr>checker"</a>
 					</li>
 				</ul>
 			</nav>
