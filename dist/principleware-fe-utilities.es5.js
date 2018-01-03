@@ -828,6 +828,22 @@ function hashMember(name, value, configuration) {
 }
 
 /**
+ * @template T, U
+ * @param {?} firstSet
+ * @param {?} secondSet
+ * @param {?} predicate
+ * @return {?}
+ */
+function diff(firstSet, secondSet, predicate) {
+    return firstSet.filter(function (x) {
+        var /** @type {?} */ secondIndex = secondSet.findIndex(function (y) {
+            return predicate(x, y);
+        });
+        return secondIndex === -1;
+    });
+}
+
+/**
  * @param {?} value
  * @return {?}
  */
@@ -933,5 +949,5 @@ function convert(value, ty) {
  * Generated bundle index. Do not edit.
  */
 
-export { tojQueryDeferred, lift, liftIntoReject, liftWithGuard, settle, liftToPredicate, readerPipeline, transform, DummyPromise, pushArray, makeArray, guid, getRandomInt, replace, applyEscape, reverseEscape, urlEncodePair, urlEncode, getParamByName, getQueryParamByName, getHashParamByName, hashCode, hashMember, safeParseString, safeParseInt, safeParseFloat, safeParseBool, convertible, convert, isBoolean, isNumber, isString, isSymbol, isNull, isUndefined, isArray$1 as isArray, isObject, isFunction, tyBool, tyNull, tyUndefined, tyNumber, tyString, tySymbol, tyObject, tyArray, tyFunction, defaultValue, ok, getType, assert };
+export { tojQueryDeferred, lift, liftIntoReject, liftWithGuard, settle, liftToPredicate, readerPipeline, transform, DummyPromise, pushArray, makeArray, guid, getRandomInt, replace, applyEscape, reverseEscape, urlEncodePair, urlEncode, getParamByName, getQueryParamByName, getHashParamByName, hashCode, hashMember, diff, safeParseString, safeParseInt, safeParseFloat, safeParseBool, convertible, convert, isBoolean, isNumber, isString, isSymbol, isNull, isUndefined, isArray$1 as isArray, isObject, isFunction, tyBool, tyNull, tyUndefined, tyNumber, tyString, tySymbol, tyObject, tyArray, tyFunction, defaultValue, ok, getType, assert };
 //# sourceMappingURL=principleware-fe-utilities.es5.js.map

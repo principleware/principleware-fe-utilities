@@ -834,6 +834,22 @@ function hashMember(name, value, configuration) {
 }
 
 /**
+ * @template T, U
+ * @param {?} firstSet
+ * @param {?} secondSet
+ * @param {?} predicate
+ * @return {?}
+ */
+function diff(firstSet, secondSet, predicate) {
+    return firstSet.filter(function (x) {
+        var /** @type {?} */ secondIndex = secondSet.findIndex(function (y) {
+            return predicate(x, y);
+        });
+        return secondIndex === -1;
+    });
+}
+
+/**
  * @param {?} value
  * @return {?}
  */
@@ -962,6 +978,7 @@ exports.getQueryParamByName = getQueryParamByName;
 exports.getHashParamByName = getHashParamByName;
 exports.hashCode = hashCode;
 exports.hashMember = hashMember;
+exports.diff = diff;
 exports.safeParseString = safeParseString;
 exports.safeParseInt = safeParseInt;
 exports.safeParseFloat = safeParseFloat;
