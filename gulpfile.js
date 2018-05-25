@@ -6,11 +6,11 @@ gulp.task("doc", function() {
         .src(["src/**/*.ts"])
         .pipe(gulpIgnore.exclude("*.spec.ts"))
         .pipe(typedoc({
-            name: "Principleware typescript utilites (2.0.0)",            
+            name: "Polpware typescript utilites (2.0.0)",            
             out: "docs/",            
             
             module: "commonjs",
-            target: "es5",
+            target: "es6",
 
             exclude: "src/**/t.spec.ts",
 
