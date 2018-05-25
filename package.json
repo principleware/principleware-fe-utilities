@@ -1,43 +1,58 @@
 {
-  "name": "principleware-fe-utilities",
-  "version": "1.0.2",
-  "description": "A set of utilties on url, array, string, data, promise, and more",
-  "main": "index.ts",
-  "scripts": {
-    "test": "karma start ./karma.conf.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://principleware@github.com/principleware/principleware-fe-utilities.git"
-  },
-  "keywords": [
-    "utilities"
-  ],
-  "author": "Principle Tang",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/principleware/principleware-fe-utilities/issues"
-  },
-  "homepage": "https://github.com/principleware/principleware-fe-utilities#readme",
-  "devDependencies": {
-    "@types/jasmine": "2.5.36",
-    "gulp": "^3.9.1",
-    "gulp-ignore": "^2.0.2",
-    "gulp-typedoc": "^2.1.1",
-    "jasmine-core": "^2.5.2",
-    "jasmine-spec-reporter": "^4.2.1",
-    "karma": "^1.5.0",
-    "karma-chrome-launcher": "^2.0.0",
-    "karma-coverage-istanbul-reporter": "^1.3.0",
-    "karma-jasmine": "^1.1.0",
-    "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-phantomjs-launcher": "^1.0.4",
-    "karma-typescript": "^3.0.8",
-    "phantomjs": "^2.1.7",
-    "ts-node": "^4.0.2",
-    "tslint": "^4.4.2",
-    "typedoc": "^0.9.0",
-    "typescript": "~2.3.0"
-  },
-  "dependencies": {}
+    "name": "polpware-fe-utilities",
+    "version": "1.0.2",
+    "description": "A set of utilties on url, array, string, data, promise, and more",
+    "main": "index.ts",
+    "scripts": {
+        "test": "karma start ./karma.conf.js",
+        "build": "ng-packagr -p package.json"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/polpware/polpware-fe-utilities.git"
+    },
+    "keywords": [
+        "utilities"
+    ],
+    "author": "Tom Tang",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/polpware/polpware-fe-utilities/issues"
+    },
+    "homepage": "https://github.com/polpware/polpware-fe-utilities#readme",
+    "ngPackage": {
+        "lib": {
+            "entryFile": "public-api.ts"
+        }
+    },
+    "devDependencies": {
+        "@angular/compiler": "^6.0.3",
+        "@angular/compiler-cli": "^6.0.3",
+        "@angular/core": "^6.0.3",
+        "@types/jasmine": "2.8.7",
+        "gulp": "^3.9.1",
+        "gulp-ignore": "^2.0.2",
+        "gulp-typedoc": "^2.2.0",
+        "jasmine": "^3.1.0",
+        "jasmine-core": "^3.1.0",
+        "jasmine-spec-reporter": "^4.2.1",
+        "karma": "^2.0.2",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-coverage-istanbul-reporter": "^2.0.1",
+        "karma-jasmine": "^1.1.2",
+        "karma-jasmine-html-reporter": "^1.1.0",
+        "karma-phantomjs-launcher": "^1.0.4",
+        "karma-typescript": "^3.0.12",
+        "ng-packagr": "^2.4.5",
+        "phantomjs": "^2.1.7",
+        "rxjs": "^6.0.0",
+        "ts-node": "^6.0.5",
+        "tsickle": "^0.29.0",
+        "tslib": "^1.9.1",
+        "tslint": "^5.10.0",
+        "typedoc": "^0.11.1",
+        "typescript": "2.7.x",
+        "zone.js": "~0.8.26"
+    },
+    "dependencies": {}
 }

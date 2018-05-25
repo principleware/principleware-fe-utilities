@@ -26,6 +26,13 @@ module.exports = function(config) {
             { pattern: "src/**/*.ts" }
         ],
 
+        typescriptPreprocessor: {
+            // options passed to the typescript compiler
+            options: {
+                target: 'ES6' // (optional) Specify ECMAScript target version: 'ES3' (default), or 'ES5'
+            }
+        },        
+
         preprocessors: {
             "**/*.ts": ["karma-typescript"]
         },

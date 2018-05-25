@@ -1,4 +1,4 @@
-# principleware-fe-utilities
+# polpware-fe-utilities
 A set of javascirpt/typescript utilties
 
 ## Dependencies
@@ -9,7 +9,7 @@ This project does not depend on any third libraries.
 
 To use it, clone this repo and install it as follows 
 
-> yarn add https://github.com/principleware/principleware-fe-utilities.git
+> yarn add https://github.com/polpware/polpware-fe-utilities.git
 
 ## Development and Test
 
@@ -23,4 +23,4 @@ To generate documentation, run
 
 ## Documentation
 
-[Visit documents](https://principleware.github.io/principleware-fe-utilities)
+[Visit documents](https://polpware.github.io/polpware-fe-utilities)

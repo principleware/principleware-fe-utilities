@@ -65,7 +65,7 @@ export const tyArray: ITypeDef = { name: 'Array', val: function() { return []; }
 export const tyFunction: ITypeDef = { name: 'Function', val: function() { }, pred: isFunction };
 
 /**
- * @constant - Predefined types and their properties.
+ *  Predefined types and their properties.
  */
 const preDefinedTypes: { [key: string]: ITypeDef } = {
     tyBool: tyBool,
@@ -108,9 +108,6 @@ export function getType(value: any): ITypeDef {
     return null;
 }
 
-/**
- * @function assert
- */
 export function assert(value: any, ty: ITypeDef): void {
     if (ok(value, ty)) {
         return;

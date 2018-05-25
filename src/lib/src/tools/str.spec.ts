@@ -1,4 +1,4 @@
-import * as str from './string';
+import * as str from './str';
 
 
 describe('replace', () => {
