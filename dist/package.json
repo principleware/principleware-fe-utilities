@@ -1,6 +1,6 @@
 {
   "name": "polpware-fe-utilities",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A set of utilties on url, array, string, data, promise, and more",
   "main": "bundles/polpware-fe-utilities.umd.js",
   "repository": {
@@ -20,7 +20,7 @@
     "@angular/compiler": "^6.0.3",
     "@angular/compiler-cli": "^6.0.3",
     "@angular/core": "^6.0.3",
-    "@types/jasmine": "2.8.7",
+    "@types/jasmine": "2.8.8",
     "gulp": "^3.9.1",
     "gulp-ignore": "^2.0.2",
     "gulp-typedoc": "^2.2.0",
@@ -34,11 +34,11 @@
     "karma-jasmine-html-reporter": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-typescript": "^3.0.12",
-    "ng-packagr": "^2.4.5",
+    "ng-packagr": "^3.0.3",
     "phantomjs": "^2.1.7",
     "rxjs": "^6.0.0",
-    "ts-node": "^6.0.5",
-    "tsickle": "^0.29.0",
+    "ts-node": "^7.0.0",
+    "tsickle": "^0.32.0",
     "tslib": "^1.9.1",
     "tslint": "^5.10.0",
     "typedoc": "^0.11.1",
@@ -48,8 +48,13 @@
   "dependencies": {
     "tslib": "^1.9.0"
   },
-  "module": "esm5/polpware-fe-utilities.js",
-  "es2015": "esm2015/polpware-fe-utilities.js",
+  "module": "fesm5/polpware-fe-utilities.js",
+  "es2015": "fesm2015/polpware-fe-utilities.js",
+  "esm5": "esm5/polpware-fe-utilities.js",
+  "esm2015": "esm2015/polpware-fe-utilities.js",
+  "fesm5": "fesm5/polpware-fe-utilities.js",
+  "fesm2015": "fesm2015/polpware-fe-utilities.js",
   "typings": "polpware-fe-utilities.d.ts",
-  "metadata": "polpware-fe-utilities.metadata.json"
+  "metadata": "polpware-fe-utilities.metadata.json",
+  "sideEffects": false
 }
