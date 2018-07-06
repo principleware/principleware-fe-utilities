@@ -1,5 +1,13 @@
 import * as typeChecker from './type-checker';
 
+export function safeParseString(value: any): string {
+    if (!value) {
+        return '';
+    }
+
+    return value.toString();
+}
+
 /**
  * Parses a given value into an integer.
  */
