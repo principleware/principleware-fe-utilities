@@ -9,7 +9,7 @@ module.exports = function(config) {
         plugins: [
             require('karma-typescript'),                                    
             require('karma-jasmine'),
-            require('karma-chrome-launcher'),
+            require('karma-phantomjs-launcher'),
             require('karma-jasmine-html-reporter'),
             require('karma-coverage-istanbul-reporter')            
         ],
@@ -39,6 +39,6 @@ module.exports = function(config) {
 
         reporters: ["dots", "karma-typescript"],
 
-        browsers: ["Chrome"]
+        browsers: ["PhantomJS"]
     });
 };
