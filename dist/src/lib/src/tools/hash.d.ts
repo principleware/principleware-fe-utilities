@@ -1,4 +1,8 @@
 /**
+ * @fileOverview
+ * Provides utilities for computing hash values
+ */
+/**
  * Computes the hash code for a given value.
  * This method takes into account the type of the given
  * value when generating its hash code.

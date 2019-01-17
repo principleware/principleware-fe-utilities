@@ -30,8 +30,8 @@ export declare function settle<T>(promise: PromiseLike<T>): PromiseLike<T>;
  */
 export declare function liftToPredicate<T>(promise: PromiseLike<T>, guard: (x: T) => boolean): PromiseLike<boolean>;
 export interface IPipelineSettings<U> {
-    validator?: (x) => boolean;
-    adaptor: (x) => U;
+    validator?: (x: any) => boolean;
+    adaptor: (x: any) => U;
 }
 /**
  * Transforms a given promise with additonal pipeline processing.

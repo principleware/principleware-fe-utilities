@@ -10,7 +10,7 @@ export declare function isFunction(x: any): x is Function;
 export interface ITypeDef {
     name: string;
     val: any;
-    pred: (any) => boolean;
+    pred: (any: any) => boolean;
 }
 export declare const tyBool: ITypeDef;
 export declare const tyNull: ITypeDef;
