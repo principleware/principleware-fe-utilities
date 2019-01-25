@@ -1,21 +1,29 @@
-var gulp = require("gulp");
-var typedoc = require("gulp-typedoc");
-var gulpIgnore = require('gulp-ignore');
-gulp.task("doc", function() {
-    return gulp
-        .src(["src/**/*.ts"])
-        .pipe(gulpIgnore.exclude("*.spec.ts"))
+const gulp = require("gulp");
+const typedoc = require("gulp-typedoc");
+
+function doc() {
+    return src(["src/**/*.ts"])
         .pipe(typedoc({
-            name: "Polpware typescript utilites (2.2.0)",            
+            name: "Polpware typescript utilities (3.0.0)",            
             out: "docs/",            
             
             module: "commonjs",
-            target: "es6",
+            target: "es5",
 
-            exclude: "src/**/t.spec.ts",
+            exclude: "src/**/t.spec.ts",            
 
             experimentalDecorators: true,
             excludePrivate: true,
-            excludeExternals: true
+            excludeExternals: true,
+
+            "lib": [
+                "lib.dom.d.ts",
+                "lib.es2015.d.ts",                
+                "lib.es2016.d.ts"
+            ]
+            
         }));
-});
+}
+
+exports.doc = doc;
+exports.default = doc;
