@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "test": "karma start ./karma.conf.js",
-    "build": "ng-packagr -p package.json",
+    "build": "ng-packagr -p ng-package.json",
     "doc": "gulp doc"
   },
   "repository": {
@@ -21,11 +21,6 @@
     "url": "https://github.com/polpware/polpware-fe-utilities/issues"
   },
   "homepage": "https://github.com/polpware/polpware-fe-utilities#readme",
-  "ngPackage": {
-    "lib": {
-      "entryFile": "public-api.ts"
-    }
-  },
   "devDependencies": {
     "@angular/compiler": "^7.2.1",
     "@angular/compiler-cli": "^7.2.1",
