@@ -1,4 +1,4 @@
-const gulp = require("gulp");
+const { src, dest, parallel } = require('gulp');
 const typedoc = require("gulp-typedoc");
 
 function doc() {
