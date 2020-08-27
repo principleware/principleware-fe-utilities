@@ -1,6 +1,9 @@
 // Karma configuration
 // Generated on Sat Dec 16 2017 21:57:37 GMT-0500 (Eastern Standard Time)
 
+const puppeteer = require('puppeteer');
+process.env.CHROME_BIN = puppeteer.executablePath();
+
 module.exports = function(config) {
     config.set({
 
@@ -9,7 +12,7 @@ module.exports = function(config) {
         plugins: [
             require('karma-typescript'),                                    
             require('karma-jasmine'),
-            require('karma-phantomjs-launcher'),
+            require('karma-chrome-launcher'),            
             require('karma-jasmine-html-reporter'),
             require('karma-coverage-istanbul-reporter')            
         ],
@@ -39,6 +42,6 @@ module.exports = function(config) {
 
         reporters: ["dots", "karma-typescript"],
 
-        browsers: ["PhantomJS"]
+        browsers: ["ChromeHeadless"]
     });
 };
