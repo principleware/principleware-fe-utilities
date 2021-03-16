@@ -3,6 +3,7 @@ BasicTypes :=
     boolean 
   | number 
   | string 
+  | date
   | symbol
   | null
   | undefined
@@ -22,6 +23,10 @@ export function isNumber(x: any): x is number {
 
 export function isString(x: any): x is string {
     return typeof x === 'string';
+}
+
+export function isDate(x: any): x is Object {
+    return Object.prototype.toString.call(x) === '[object Date]';
 }
 
 export function isSymbol(x: any): x is symbol {
@@ -59,6 +64,7 @@ export const tyNull: ITypeDef = { name: 'Null', val: null, pred: isNull };
 export const tyUndefined: ITypeDef = { name: 'Undefined', val: undefined, pred: isUndefined };
 export const tyNumber: ITypeDef = { name: 'Number', val: 0, pred: isNumber };
 export const tyString: ITypeDef = { name: 'String', val: '', pred: isString };
+export const tyDate: ITypeDef = { name: 'Object', val: function() { return Date.now(); }, pred: isDate };
 export const tySymbol: ITypeDef = { name: 'Symbol', val: null, pred: isSymbol };
 export const tyObject: ITypeDef = { name: 'Object', val: function() { return {}; }, pred: isObject };
 export const tyArray: ITypeDef = { name: 'Array', val: function() { return []; }, pred: isArray };
@@ -73,6 +79,7 @@ const preDefinedTypes: { [key: string]: ITypeDef } = {
     tyUndefined: tyUndefined,
     tyNumber: tyNumber,
     tyString: tyString,
+    tyDate: tyDate,
     tySymbol: tySymbol,
     tyObject: tyObject,
     tyArray: tyArray,
