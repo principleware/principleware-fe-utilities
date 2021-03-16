@@ -1,3 +1,6 @@
+## 9.1.0 (March 16, 2021)
+  - Update gulp file for bump version
+
 ## 0.1.0 (March 16, 2021)
   - Extend with tyDate
   - Drop the use of PhantomJs, Use Chromium instead
