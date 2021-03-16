@@ -40,7 +40,7 @@ function bump() {
     const newVer = getVersion().trim();
 
 // bump versions on package/bower/manifest
-    return src(['./package.json', './projects/polpware/fe-data/package.json'])
+    return src(['./package.json'])
         .pipe(bumpversion({
             version: newVer
         }))
