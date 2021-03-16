@@ -6,7 +6,8 @@
   "scripts": {
     "test": "karma start ./karma.conf.js",
     "build": "ng-packagr -p ng-package.json",
-    "doc": "gulp doc"
+      "doc": "gulp doc",
+        "bump": "gulp bump"      
   },
   "repository": {
     "type": "git",
